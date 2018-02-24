@@ -26,14 +26,16 @@ if( input =='a' || input =='A')
     cin>>list[numItems]; 
     numItems++; 
     }
-   else 
+  /* else 
    {
    cout<<"You'll need a bigger list!"<<endl; 
    }
+   */
 }    
   }
-while (input != 'q' && input != 'Q');
-
-
+while ((input != 'q' && input != 'Q') && numItems<5);
+{
+    cout<<"You'll need a bigger list!"<<endl;
+}
   return 0;
 }
