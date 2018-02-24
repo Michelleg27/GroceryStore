@@ -1,6 +1,7 @@
 //Author: Michelle Gomez
 #include<iostream>
 #include<string>
+
 using namespace std;
 
 const int LIST_SIZE = 5;
@@ -20,22 +21,22 @@ do{
   cin>>input;
 if( input =='a' || input =='A')
 {
-    if( numItems < LIST_SIZE)
-    {
     cout<<"What is the item?"<<endl;
-    cin>>list[numItems]; 
+    cin>>item;
+    int len = item.length(); 
+  if(numItems < 5)
+  {
+    list[numItems] = item;
     numItems++; 
+  }
+    else 
+    {
+       cout<<"You'll need a bigger list!"<<endl; 
     }
-  /* else 
-   {
-   cout<<"You'll need a bigger list!"<<endl; 
-   }
-   */
+   
 }    
   }
-while ((input != 'q' && input != 'Q') && numItems<5);
-{
-    cout<<"You'll need a bigger list!"<<endl;
-}
-  return 0;
+while (input != 'q' && input != 'Q');
+ 
+    return 0;
 }
